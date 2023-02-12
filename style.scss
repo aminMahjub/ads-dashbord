@@ -1,0 +1,56 @@
+@use './abstract/reset' as *;
+@use './abstract/colors' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap');
+
+body, html {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $main-dark;
+    background-color: $pure-white;
+}
+
+body, html, button, input, textarea {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem 1.5rem;
+
+    a {
+        text-decoration: none;
+        color: $main-dark;
+        margin: 0px 0.5rem;
+        transition: color 0.1s ease-in-out;
+
+        &:hover {
+            color: $robin-egg-blue;
+        }
+    }
+
+    #websiteLogo {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 0.5rem;
+    }
+}
+
+header {
+    padding: 0rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 18.75rem;
+
+    h1 {
+        font-size: 2rem;
+        max-width: 17.5rem;
+
+        important {
+            font-weight: 600;
+            color: $yinmn-blue;
+        } 
+    }
+}

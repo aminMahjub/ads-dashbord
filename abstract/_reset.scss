@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font: inherit;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea {
+    border: 0px;
+    outline: 0px;
+}
