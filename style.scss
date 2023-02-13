@@ -1,56 +1,95 @@
 @use './abstract/reset' as *;
 @use './abstract/colors' as *;
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;700&display=swap');
 
 body, html {
-    font-size: 1rem;
-    font-weight: 500;
-    color: $main-dark;
-    background-color: $pure-white;
+    height: 100vh;
+    background-color: $app-bg;
+    color: $text-color;
+    font-family: 'Poppins', sans-serif;
+
+    display: grid;
+    grid-template-columns: 12.5rem repeat(2, 1fr);
+    grid-template-rows: 1fr;
 }
 
-body, html, button, input, textarea {
-    font-family: 'Source Sans Pro', sans-serif;
-}
+.left-part {
+    padding-top: 2.2rem;
+    padding: 2.2rem 1.2rem 0rem 0rem;
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.1rem 1.5rem;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5rem;
+        padding: 0rem 1.2rem;
 
-    a {
-        text-decoration: none;
-        color: $main-dark;
-        margin: 0px 0.5rem;
-        transition: color 0.1s ease-in-out;
+        img {
+            font-size: 1.2rem;
+        }
 
-        &:hover {
-            color: $robin-egg-blue;
+        .hambergur-menu-icon {
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+
+            background: {
+                image: url('./images/icons/hambergur-menu.svg');
+                size: 1.2rem;
+                repeat: no-repeat;
+                position: center;
+            }
         }
     }
 
-    #websiteLogo {
-        height: 2.5rem;
-        width: 2.5rem;
-        border-radius: 0.5rem;
-    }
-}
+    nav {
+        display: grid;
+        grid-gap: .8rem;
 
-header {
-    padding: 0rem 3.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 18.75rem;
+        a {
+            position: relative;
+            text-decoration: none;
+            color: $text-color;
+            padding: 1rem 1rem 1rem 3.5rem;
+            border-radius: .8rem;
+            background: {
+                repeat: no-repeat;
+                position: 1.2rem 1rem;
+                size: 1.3rem;
+            }
 
-    h1 {
-        font-size: 2rem;
-        max-width: 17.5rem;
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
 
-        important {
-            font-weight: 600;
-            color: $yinmn-blue;
+        .notification {
+            padding: .05rem .5rem;
+            border-radius: 50%;
+            background-color: $red-color-badge;
+            position: absolute;
+            right: .5rem;
         } 
+
+        .dashboard {
+            background-image: url('./images/icons/home.svg');
+        }
+
+        .alerts {
+            background-image: url('./images/icons/alarm.png');
+        }
+
+        .studio {
+            background-image: url('./images/icons/planet.png');
+        }
+
+        .reports {
+            background-image: url('./images/icons/fill-chart.png');
+        }
+
+        .section {
+            background-image: url('./images/icons/settings.png');
+        }
+
     }
 }

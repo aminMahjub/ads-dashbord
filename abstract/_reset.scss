@@ -11,3 +11,9 @@ textarea {
     border: 0px;
     outline: 0px;
 }
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }

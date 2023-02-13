@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font: inherit;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea {
+  border: 0px;
+  outline: 0px;
+}
+
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, html {
+  height: 100vh;
+  background-color: #141627;
+  color: #e1e2f6;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-columns: 12.5rem repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.left-part {
+  padding-top: 2.2rem;
+  padding: 2.2rem 1.2rem 0rem 0rem;
+}
+.left-part header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding: 0rem 1.2rem;
+}
+.left-part header img {
+  font-size: 1.2rem;
+}
+.left-part header .hambergur-menu-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  background-image: url("./images/icons/hambergur-menu.svg");
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.left-part nav {
+  display: grid;
+  grid-gap: 0.8rem;
+}
+.left-part nav a {
+  position: relative;
+  text-decoration: none;
+  color: #e1e2f6;
+  padding: 1rem 1rem 1rem 3.5rem;
+  border-radius: 0.8rem;
+  background-repeat: no-repeat;
+  background-position: 1.2rem 1rem;
+  background-size: 1.3rem;
+}
+.left-part nav a:hover {
+  background-color: #3b3170;
+}
+.left-part nav .notification {
+  padding: 0.05rem 0.5rem;
+  border-radius: 50%;
+  background-color: #ff0800;
+  position: absolute;
+  right: 0.5rem;
+}
+.left-part nav .dashboard {
+  background-image: url("./images/icons/home.svg");
+}
+.left-part nav .alerts {
+  background-image: url("./images/icons/alarm.png");
+}
+.left-part nav .studio {
+  background-image: url("./images/icons/planet.png");
+}
+.left-part nav .reports {
+  background-image: url("./images/icons/fill-chart.png");
+}
+.left-part nav .section {
+  background-image: url("./images/icons/settings.png");
+}/*# sourceMappingURL=style.css.map */
