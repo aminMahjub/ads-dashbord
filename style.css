@@ -21,17 +21,19 @@ textarea {
 
 body, html {
   height: 100vh;
-  background-color: #141627;
+  width: 100vw;
   color: #e1e2f6;
   font-family: "Poppins", sans-serif;
   display: grid;
-  grid-template-columns: 12.5rem repeat(2, 1fr);
+  grid-template-columns: 12.5rem 1fr 24rem;
   grid-template-rows: 1fr;
+  z-index: -2;
 }
 
 .left-part {
-  padding-top: 2.2rem;
   padding: 2.2rem 1.2rem 0rem 0rem;
+  background-color: #141627;
+  z-index: -1;
 }
 .left-part header {
   display: flex;
@@ -90,4 +92,236 @@ body, html {
 }
 .left-part nav .section {
   background-image: url("./images/icons/settings.png");
+}
+
+main {
+  padding: 2.2rem 2rem;
+  position: relative;
+  background-color: #141627;
+}
+main .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .profile .create-btn {
+  width: 6.2rem;
+  height: 2.1rem;
+  background-color: #755cdd;
+  padding-left: 1.4rem;
+  color: #e1e2f6;
+  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-image: url("./images/icons/plus.png");
+  background-size: 1.5rem;
+  background-position: 0.4rem 0.2rem;
+  background-repeat: no-repeat;
+}
+main .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+main .profile-container .bottom-arrow-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  background-image: url("./images/icons/bottom-arrow.png");
+  background-size: 1.2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main .profile-container img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+main .profile-header h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #636888;
+}
+main .profile-header h1 important {
+  font-weight: bold;
+  color: #e1e2f6;
+}
+main::before {
+  content: "";
+  width: 1.5rem;
+  height: 19rem;
+  position: absolute;
+  left: -28px;
+  top: 28px;
+  border-radius: 0.8rem;
+  background: linear-gradient(purple, pink);
+  filter: blur(30px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ads-training {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #1c1f37;
+  max-width: min(100%, 80rem);
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+}
+.ads-training .description-section {
+  padding: 3rem;
+}
+.ads-training .description-section h1 {
+  font-size: 1.7rem;
+}
+.ads-training .offer-title {
+  margin-bottom: 2rem;
+}
+.ads-training .offer-title span {
+  color: #636888;
+}
+.ads-training .additional-desc {
+  color: #636888;
+  margin-bottom: 2.5rem;
+}
+.ads-training .about-section {
+  color: #636888;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.ads-training .wacth-now-btn {
+  background-color: #6f69ef;
+  color: #e1e2f6;
+  width: 10.2rem;
+  height: 3.5rem;
+  padding-right: 1.3rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-image: url("./images/icons/play.png");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+}
+.ads-training .wacth-now-btn::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  filter: blur(20px);
+  background-color: cyan;
+  display: inline;
+  position: absolute;
+  top: -18px;
+}
+.ads-training .wacth-now-btn::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  filter: blur(20px);
+  background-color: palevioletred;
+  display: inline;
+  position: absolute;
+  right: 13px;
+  bottom: -5px;
+}
+.ads-training img {
+  max-width: 40%;
+  height: 28rem;
+}
+
+.campaigns {
+  margin-top: 2rem;
+}
+.campaigns header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.campaigns header .left-side, .campaigns header .right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.campaigns header h1 {
+  font-size: 1.8rem;
+}
+.campaigns header .comaping-notification {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background-color: #3690c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.campaigns header .filter-icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background-image: url("./images/icons/filter.png");
+  background-position: center;
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.campaigns header .plus-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-image: url("./images/icons/plus.png");
+  background-position: center;
+  background-size: 1.6rem;
+  background-repeat: no-repeat;
+  background-color: #242942;
+}
+
+.campaign-box {
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+  background-color: #1c1f37;
+  border-radius: 0.6rem;
+}
+.campaign-box header {
+  margin-bottom: 1.4rem;
+}
+.campaign-box header h2 {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.campaign-box header h2::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #9ec725;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+.campaign-box header .right-arrow-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-image: url("./images/icons/right-arrow.png");
+  background-position: center;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-color: #242942;
+}
+.campaign-box header .horizntal-option {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background-image: url("./images/icons/horizental-option.png");
+  background-position: center;
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }/*# sourceMappingURL=style.css.map */

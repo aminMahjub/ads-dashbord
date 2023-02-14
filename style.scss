@@ -4,18 +4,21 @@
 
 body, html {
     height: 100vh;
-    background-color: $app-bg;
+    width: 100vw;
     color: $text-color;
     font-family: 'Poppins', sans-serif;
 
     display: grid;
-    grid-template-columns: 12.5rem repeat(2, 1fr);
+    grid-template-columns: 12.5rem 1fr 24rem;
     grid-template-rows: 1fr;
+    z-index: -2;
 }
 
 .left-part {
-    padding-top: 2.2rem;
     padding: 2.2rem 1.2rem 0rem 0rem;
+    background-color: $app-bg;
+    z-index: -1;
+
 
     header {
         display: flex;
@@ -93,3 +96,292 @@ body, html {
 
     }
 }
+
+main {
+    padding: 2.2rem 2rem;
+    position: relative;
+    background-color: $app-bg;
+    
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .create-btn {
+            width: 6.2rem;
+            height: 2.1rem;
+            background-color: $btn-primary;
+            padding-left: 1.4rem;
+            color: $text-color;
+            font-size: 0.8rem;
+            border-radius: 0.4rem;
+            cursor: pointer;
+
+            background: {
+                image: url('./images/icons/plus.png');
+                size: 1.5rem;
+                position: .4rem .2rem;
+                repeat: no-repeat;
+            }
+        }
+    }
+
+    .profile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .6rem;
+
+        .bottom-arrow-icon {
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+
+            background: {
+                image: url('./images/icons/bottom-arrow.png');
+                size: 1.2rem;
+                position: center;
+                repeat: no-repeat;
+            }
+        }
+
+        img {
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+    }
+
+    .profile-header h1 {
+        margin-top: 1rem;
+        font-size: 2rem;
+        font-weight: 300;
+        color: $text-color-secondary;
+
+        important {
+            font-weight: bold;
+            color: $text-color;
+        }
+    }
+
+    &::before {
+        content: '';
+        width: 1.5rem;
+        height: 19rem;
+        position: absolute;
+        left: -28px;
+        top: 28px;
+        border-radius: .8rem;
+        background: linear-gradient(purple, pink);
+        filter: blur(30px);
+        border-radius: 50%;
+        z-index: -1;
+    }
+}
+
+.ads-training {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $box-primary;
+    max-width: min(100%, 80rem);
+    margin-top: 2rem;
+    border-radius: .6rem;
+
+
+    .description-section {
+        padding: 3rem;
+
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+
+    .offer-title {
+        margin-bottom: 2rem;
+
+        span {
+            color: $text-color-secondary;
+        }
+    }
+
+    .additional-desc {
+        color: $text-color-secondary;
+        margin-bottom: 2.5rem;
+    }
+
+    .about-section {
+        color: $text-color-secondary;
+        font-size: .9rem;
+        margin-bottom: 1.5rem;   
+    }
+
+    .wacth-now-btn {
+        background-color: $btn-secondary;
+        color: $text-color;
+        width: 10.2rem;
+        height: 3.5rem;
+        padding-right: 1.3rem;
+        border-radius: .7rem;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        background: {
+            image: url('./images/icons/play.png');
+            position: right 1rem center;
+            repeat: no-repeat;
+            size: 1.2rem;
+        }
+
+        &::before {
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            filter: blur(20px);
+            background-color: cyan;
+            display: inline;
+            position: absolute;
+            top: -18px;
+        }
+
+        &::after {
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            filter: blur(20px);
+            background-color: palevioletred;
+            display: inline;
+            position: absolute;
+            right: 13px;
+            bottom: -5px;
+        }
+    }
+    
+    img {
+        max-width: 40%;
+        height: 28rem;
+    }
+}
+
+.campaigns {
+    margin-top: 2rem;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-side {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        .comaping-notification {
+            width: 2.3rem;
+            height: 2.3rem;
+            border-radius: 50%;
+            background-color: $badge-primary;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-side {
+            @extend .left-side;
+        }
+
+        .filter-icon {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+
+            background: {
+                image: url('./images/icons/filter.png');
+                position: center;
+                size: 2rem;
+                repeat: no-repeat;
+                color: transparent;
+            }
+        }
+
+        .plus-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: .5rem;
+            cursor: pointer;
+
+            background: {
+                image: url('./images/icons/plus.png');
+                position: center;
+                size: 1.6rem;
+                repeat: no-repeat;
+                color: $button-badge;
+            }
+        }
+    }
+}
+
+.campaign-box {
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    background-color: $box-primary;
+    border-radius: .6rem;
+
+    header {
+        margin-bottom: 1.4rem;
+
+        h2 {
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+
+            &::before {
+                content: '';
+                width: .5rem;
+                height: .5rem;
+                background-color: $badge-green;
+                border-radius: 50%;
+                margin-top: .5rem;
+            }
+        }
+
+        .right-arrow-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: .5rem;
+            cursor: pointer;
+
+            background: {
+                image: url('./images/icons/right-arrow.png');
+                position: center;
+                size: 1.2rem;
+                repeat: no-repeat;
+                color: $button-badge;
+            }
+        }
+
+        .horizntal-option {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+
+            background: {
+                image: url('./images/icons/horizental-option.png');
+                position: center;
+                size: 1.5rem;
+                repeat: no-repeat;
+                color: transparent;
+            }
+        }
+    }
+}
+
