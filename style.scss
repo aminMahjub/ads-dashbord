@@ -484,3 +484,112 @@ main {
     overflow-x: hidden;
 }
 
+aside.right-part {
+    background-color: $app-bg;
+} 
+
+.activity {
+    margin-top: .5rem;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+
+        .filter-icon {
+            width: 2.2rem;
+            height: 2.2rem;
+            cursor: pointer;
+            border-radius: .5rem;
+            background: {
+                image: url(./images/icons/activity-filter.png);
+                position: center;
+                size: 1.4rem;
+                repeat: no-repeat;
+                color: $button-badge;
+            }
+        }
+    }
+}
+
+.messages-container {
+    margin-top: 1.3rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 84vh;
+}
+
+.message {
+    background-color: $box-primary;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    border-radius: .7rem;
+
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    .message-info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.1rem;
+
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: .2rem;
+
+        time {
+            font-size: .8rem;
+            color: $text-color-secondary;
+
+            &::before {
+                content: '';
+                width: .2rem;
+                height: .2rem;
+                border-radius: 50%;
+                background-color: $text-color-secondary;
+                margin-right: .2rem;
+                display: inline-block;
+            }
+        }
+
+        .username {
+            color: $text-color;
+            margin-bottom: .5rem;
+        }
+
+        .messsage-para {
+            font-size: .8rem;
+            color: $text-color-secondary;
+        }
+    }
+
+    .open-message {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: .5rem;
+        cursor: pointer;
+
+        background: {
+            image: url('./images/icons/right-arrow.png');
+            position: center;
+            size: 1.2rem;
+            repeat: no-repeat;
+            color: $button-badge;
+        }
+    }
+}
+

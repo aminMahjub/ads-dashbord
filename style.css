@@ -398,4 +398,97 @@ main::before, .campaign-box .desc-part::before {
   height: 84vh;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+aside.right-part {
+  background-color: #141627;
+}
+
+.activity {
+  margin-top: 0.5rem;
+}
+.activity header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.activity header .filter-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background-image: url(./images/icons/activity-filter.png);
+  background-position: center;
+  background-size: 1.4rem;
+  background-repeat: no-repeat;
+  background-color: #242942;
+}
+
+.messages-container {
+  margin-top: 1.3rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 84vh;
+}
+
+.message {
+  background-color: #1c1f37;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  border-radius: 0.7rem;
+}
+.message:last-of-type {
+  margin-bottom: 0px;
+}
+.message .message-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.1rem;
+}
+.message .message-info img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.message .info {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+.message .info time {
+  font-size: 0.8rem;
+  color: #636888;
+}
+.message .info time::before {
+  content: "";
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background-color: #636888;
+  margin-right: 0.2rem;
+  display: inline-block;
+}
+.message .info .username {
+  color: #e1e2f6;
+  margin-bottom: 0.5rem;
+}
+.message .info .messsage-para {
+  font-size: 0.8rem;
+  color: #636888;
+}
+.message .open-message {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-image: url("./images/icons/right-arrow.png");
+  background-position: center;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-color: #242942;
 }/*# sourceMappingURL=style.css.map */
