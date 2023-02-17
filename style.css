@@ -28,6 +28,7 @@ body, html {
   grid-template-columns: 12.5rem 1fr 24rem;
   grid-template-rows: 1fr;
   z-index: -2;
+  overflow: hidden;
 }
 
 .left-part {
@@ -94,17 +95,17 @@ body, html {
   background-image: url("./images/icons/settings.png");
 }
 
-main {
+main, .campaign-box .desc-part {
   padding: 2.2rem 2rem;
   position: relative;
   background-color: #141627;
 }
-main .profile {
+main .profile, .campaign-box .desc-part .profile {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .profile .create-btn {
+main .profile .create-btn, .campaign-box .desc-part .profile .create-btn {
   width: 6.2rem;
   height: 2.1rem;
   background-color: #755cdd;
@@ -118,13 +119,13 @@ main .profile .create-btn {
   background-position: 0.4rem 0.2rem;
   background-repeat: no-repeat;
 }
-main .profile-container {
+main .profile-container, .campaign-box .desc-part .profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
 }
-main .profile-container .bottom-arrow-icon {
+main .profile-container .bottom-arrow-icon, .campaign-box .desc-part .profile-container .bottom-arrow-icon {
   width: 1.2rem;
   height: 1.2rem;
   cursor: pointer;
@@ -133,21 +134,21 @@ main .profile-container .bottom-arrow-icon {
   background-position: center;
   background-repeat: no-repeat;
 }
-main .profile-container img {
+main .profile-container img, .campaign-box .desc-part .profile-container img {
   width: 2.8rem;
   height: 2.8rem;
 }
-main .profile-header h1 {
+main .profile-header h1, .campaign-box .desc-part .profile-header h1 {
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 300;
   color: #636888;
 }
-main .profile-header h1 important {
+main .profile-header h1 important, .campaign-box .desc-part .profile-header h1 important {
   font-weight: bold;
   color: #e1e2f6;
 }
-main::before {
+main::before, .campaign-box .desc-part::before {
   content: "";
   width: 1.5rem;
   height: 19rem;
@@ -230,6 +231,7 @@ main::before {
 .ads-training img {
   max-width: 40%;
   height: 28rem;
+  transform: scaleX(-1);
 }
 
 .campaigns {
@@ -324,4 +326,76 @@ main::before {
   background-size: 1.5rem;
   background-repeat: no-repeat;
   background-color: transparent;
+}
+.campaign-box main, .campaign-box .desc-part {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+.campaign-box main::before, .campaign-box .desc-part::before {
+  all: unset;
+}
+.campaign-box main .magnet-img, .campaign-box .desc-part .magnet-img {
+  height: 100%;
+  width: min(12.2rem, 40%);
+}
+.campaign-box .facebook-titles p {
+  color: #636888;
+  margin-bottom: 0.7rem;
+}
+.campaign-box .facebook-titles p:last-of-type {
+  font-size: 0.8rem;
+}
+.campaign-box .facebook-titles h2 {
+  color: #e1e2f6;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+}
+.campaign-box .facebook-chart {
+  width: 12rem;
+  height: 12rem;
+}
+.campaign-box .facebook-figures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+.campaign-box .facebook-figures div {
+  border-left: 1px solid #636888;
+  padding-left: 1rem;
+}
+.campaign-box .facebook-figures div:first-of-type {
+  border-left: 0;
+}
+.campaign-box .facebook-figures div h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+.campaign-box .facebook-figures div p {
+  font-size: 0.8rem;
+  color: #636888;
+  padding-left: 1rem;
+  background-repeat: no-repeat;
+  background-size: 0.8rem;
+  background-position: left;
+}
+.campaign-box .facebook-figures .daily-budget p {
+  background-image: url(./images/icons/puzzle.png);
+}
+.campaign-box .facebook-figures .total-spent p {
+  background-image: url(./images/icons/star.png);
+}
+.campaign-box .facebook-figures .conversion p {
+  background-image: url(./images/icons/recycle.png);
+}
+
+.scrollable-wrapper {
+  height: 84vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */

@@ -12,6 +12,7 @@ body, html {
     grid-template-columns: 12.5rem 1fr 24rem;
     grid-template-rows: 1fr;
     z-index: -2;
+    overflow: hidden;
 }
 
 .left-part {
@@ -260,6 +261,7 @@ main {
     img {
         max-width: 40%;
         height: 28rem;
+        transform: scaleX(-1);
     }
 }
 
@@ -383,5 +385,102 @@ main {
             }
         }
     }
+
+    main {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+
+        &::before {
+            all: unset;
+        }
+
+        .magnet-img {
+            height: 100%;
+            width: min(12.2rem, 40%);
+        }
+    }
+
+    .desc-part {
+        @extend main;
+    }
+
+    .facebook-titles {
+        p {
+            color: $text-color-secondary;
+            margin-bottom: .7rem;
+
+            &:last-of-type {
+                font-size: .8rem;
+            }
+        }
+
+        h2 {
+            color: $text-color;
+            font-size: 1.7rem;
+            margin-bottom: .7rem;
+        }
+    }
+
+    .facebook-chart {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .facebook-figures {
+        display: grid;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-template-rows: 1fr;
+        gap: 2rem;
+        margin-top: .5rem;
+
+        div {
+            border-left: 1px solid $text-color-secondary;
+            padding-left: 1rem;
+
+            &:first-of-type {
+                border-left: 0;
+
+            }
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: .4rem;
+                font-weight: 500;
+            }
+
+            p {
+                font-size: .8rem;
+                color: $text-color-secondary;
+                padding-left: 1rem;
+
+                background: {
+                    repeat: no-repeat;
+                    size: .8rem;
+                    position: left;
+                }
+            }
+
+        }
+
+        .daily-budget p {
+            background-image: url(./images/icons/puzzle.png);
+        }
+
+        .total-spent p {
+            background-image: url(./images/icons/star.png);
+        }
+
+        .conversion p {
+            background-image: url(./images/icons/recycle.png);
+        }
+    }
+}
+
+.scrollable-wrapper {
+    height: 84vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
