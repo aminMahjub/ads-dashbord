@@ -546,10 +546,7 @@ aside.right-part {
     }
 
     .info {
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-        gap: .2rem;
+        position: relative;
 
         time {
             font-size: .8rem;
@@ -564,16 +561,24 @@ aside.right-part {
                 margin-right: .2rem;
                 display: inline-block;
             }
+
+
         }
 
         .username {
             color: $text-color;
-            margin-bottom: .5rem;
         }
 
         .messsage-para {
             font-size: .8rem;
             color: $text-color-secondary;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .4rem;
         }
     }
 
@@ -582,6 +587,7 @@ aside.right-part {
         height: 2.5rem;
         border-radius: .5rem;
         cursor: pointer;
+        position: relative;
 
         background: {
             image: url('./images/icons/right-arrow.png');
@@ -593,3 +599,78 @@ aside.right-part {
     }
 }
 
+.from-facebook {
+    .open-message::before {
+        content: '';
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
+
+        position: absolute;
+        left: -30px;
+        top: 8px;
+
+        background: {
+            image: url('./images/icons/facebook.svg');
+            repeat: no-repeat;
+            position: center;
+            size: 1.5rem;
+        }
+    }
+}
+
+.messages-container div[class*="message-status"] {
+    .info::before {
+        content: '';
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
+        border-radius: .7rem;
+
+        position: absolute;
+        left: -29px;
+        top: 30px;
+
+        background: {
+            repeat: no-repeat;
+            position: center;
+            size: 1rem;
+            color: $app-bg;
+        }
+    }
+}
+
+.liked {
+    .info::before {
+        background-image: url(./images/icons/heart.png);
+    }
+}
+
+.commented {
+    .info::before {
+        background-image: url(./images/icons/comment.png);
+    }
+}
+
+
+.new-leader {
+    .info::before {
+        background-image: url(./images/icons/king.png);
+    }
+}
+
+.anonymous {
+
+    .info .profile-container {
+        display: grid;
+    }
+    
+    time {
+        @extend .messsage-para;
+
+        &::before {
+            width: 0px !important;
+            height: 0px !important;
+        }
+    }
+}

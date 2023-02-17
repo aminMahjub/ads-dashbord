@@ -455,10 +455,7 @@ aside.right-part {
   height: 2.5rem;
 }
 .message .info {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 0.2rem;
+  position: relative;
 }
 .message .info time {
   font-size: 0.8rem;
@@ -475,20 +472,75 @@ aside.right-part {
 }
 .message .info .username {
   color: #e1e2f6;
-  margin-bottom: 0.5rem;
 }
-.message .info .messsage-para {
+.message .info .messsage-para, .message .info .anonymous time, .anonymous .message .info time {
   font-size: 0.8rem;
   color: #636888;
+}
+.message .info .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
 }
 .message .open-message {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  position: relative;
   background-image: url("./images/icons/right-arrow.png");
   background-position: center;
   background-size: 1.2rem;
   background-repeat: no-repeat;
   background-color: #242942;
+}
+
+.from-facebook .open-message::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  top: 8px;
+  background-image: url("./images/icons/facebook.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5rem;
+}
+
+.messages-container div[class*=message-status] .info::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  border-radius: 0.7rem;
+  position: absolute;
+  left: -29px;
+  top: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1rem;
+  background-color: #141627;
+}
+
+.liked .info::before {
+  background-image: url(./images/icons/heart.png);
+}
+
+.commented .info::before {
+  background-image: url(./images/icons/comment.png);
+}
+
+.new-leader .info::before {
+  background-image: url(./images/icons/king.png);
+}
+
+.anonymous .info .profile-container {
+  display: grid;
+}
+.anonymous time::before {
+  width: 0px !important;
+  height: 0px !important;
 }/*# sourceMappingURL=style.css.map */
